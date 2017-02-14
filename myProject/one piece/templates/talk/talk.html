@@ -1,0 +1,38 @@
+<ion-view view-title="海贼论坛">
+    <ion-header-bar class="bar bar-assertive">
+        <p class="title">海贼论坛</p>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list" show-delete="config.showDel" show-reorder="config.showReo">
+            <ion-refresher pulling-text="下拉刷新" pulling-icon="refreshing-icon" on-pulling="doRefresh()"></ion-refresher>
+            <div class="card">
+                <a class="item item-avatar-left" ng-repeat="talk in products">
+                    <img src="images/{{talk.imgsrc}}">
+                    <h4 id="tit">{{talk.title}}</h4><br>
+                    <h6 id="con">{{talk.content}}</h6><br>
+                    <p id="pp">{{timer.nowTime | date:"yyyy年MM月dd日"}}</p>
+                    <div id="huifu">
+                        <i class="icon ion-thumbsup"> 顶 </i>
+                        <i class="icon ion-thumbsdown"> 踩 </i>
+                        <i class="icon ion-ios-chatboxes-outline"> 回复 </i>
+                    </div>
+
+                </a>
+                <br>
+            </div>
+            <br>
+        </div>
+        <ion-infinite-scroll on-infinite="loadMore()" immediate-check="false"></ion-infinite-scroll>
+
+    </ion-content>
+    <div id="top">
+        <i class="i-icon ion-arrow-up-a"ng-click="top()"></i>
+    </div>
+   <!-- <ion-tabs class="tabs-icon-top tabs-color-active-balanced">
+        <ion-tab title="首页" icon-on="ion-ios-home" icon-off="ion-ios-home-outline" ui-sref="home"></ion-tab>
+        <ion-tab title="人物介绍" icon-on="ion-ios-cartoon" icon-off="ion-ios-cartoon-outline" ui-sref="cartoon"></ion-tab>
+        <ion-tab title="论坛" badge="5" badge-style="badge-assertive" icon-on="ion-chatbubble-working" icon-off="ion-chatbubble" ui-sref="talk"></ion-tab>
+        <ion-tab title="果实分类" icon-on="ion-ios-rose" icon-off="ion-ios-rose-outline" ui-sref="rim"></ion-tab>
+        <ion-tab title="剧情" icon-on="ion-ios-paper" icon-off="ion-ios-paper-outline" ui-sref="content"></ion-tab>
+    </ion-tabs>-->
+</ion-view>

@@ -1,0 +1,22 @@
+<ion-view view-title="周边产品" hide-nav-bar="true">
+    <ion-header-bar class="bar-assertive">
+        <p class="title">周边产品</p>
+    </ion-header-bar>
+    <ion-content>
+        <div class="card" show-delete="config.showDel" show-reorder="config.showReo">
+            <ion-refresher pulling-text="下拉刷新" pulling-icon="refreshing-icon" on-pulling="doRefresh()"></ion-refresher>
+            <!--<div ng-repeat="shop in products">
+                <a href="javascript:;"><img src="images/{{shop.imgsrc}}" width="450"></a> <br><br><br><br>
+            </div>-->
+            <div class="item item-avatar-left" ng-repeat="person in products" style="cursor: pointer" ui-sref="shop">
+                <img src="images/{{person.imgsrc}}">
+                <h3>{{person.name}}</h3>
+                <p>{{person.pre}}</p>
+            </div>
+        </div>
+        <ion-infinite-scroll on-infinite="loadMore()" immediate-check="false"></ion-infinite-scroll>
+    </ion-content>
+    <div id="top">
+        <i class="i-icon ion-arrow-up-a"ng-click="top()"></i>
+    </div>
+</ion-view>

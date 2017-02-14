@@ -1,0 +1,122 @@
+<div class="panel panel-danger" style="width:1230px; margin-left: -40px;">
+    <!--<div class="panel-heading">商品详情页</div>-->
+    <div class="panel-body">
+        <!--<p class="well">这是商品详情页</p>-->
+
+        <!--<p class="well">{{product.name}},{{product.price}}</p>-->
+        <!--<button class="btn btn-link" ng-click="add()">购买</button>-->
+        <div class="cont clearfix">
+            <div class="mid clearfix">
+                <div class="picBox clearfix">
+                    <div class="bigPic">
+                        <ul>
+                            <li><img  ng-src="images/{{product.imgsrc}}"></li>
+                            <!--<li class="ac"><img src="images/TB2_400x400.jpg"></li>
+                            <li class="ac"><img src="images/TB3_400x400.jpg"></li>-->
+                            <br>
+                            <li><a href="#/productList" class="qcby"> <img src="images/qcby.jpg" style="height: 80px; height: 150px;"></a></li>
+                        </ul>
+                        <span class="ac"></span>
+                        <div class="popPic">
+                            <ul>
+                                <!--<li><img src="images/56332e62N5a5f528a_003.jpg"></li>
+                                <li><img src="images/aaa.jpg"></li>
+                                <li><img src="images/ddd.jpg"></li>-->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="littlePic">
+                        <ol>
+                            <!--<li class="hong"><img src="images/TB4_100x100.jpg"></li>
+                            <li><img src="images/TB2_100x100.jpg"></li>
+                            <li><img src="images/TB3_100x100.jpg"></li>-->
+                        </ol>
+                    </div>
+                </div>
+                <div class="text clearfix">
+                    <!--<h4>BURBERRY 博柏利 棉服装 女士 中长款 休闲风 外套4023479 杏色101 8</h4>-->
+                    <h4>{{product.name}}</h4>
+                    <p>【12月大促】年终钜惠！新一代闪存，别具一格的突破性设计，专业级台式电脑所需的一切尽在于此！<a href="#">更多活动点击</a></p>
+                    <div class="cuxiao clearfix">
+                        <div class="left">
+                            <div class="jdj">
+                                <p>京&nbsp;&nbsp;东&nbsp;&nbsp;价&nbsp;&nbsp;<span>{{product.price}}</span><a href="#">降价通知</a></p>
+                            </div>
+                            <div class="jdj jdj2">
+                                <p>促&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销&nbsp;&nbsp;<span>加价购</span>
+                                    满500.00元另加548.00元即可在购物车换购热销商品 <a href="#">详情>></a></p>
+                                <p class="ppp">&nbsp;&nbsp;<span>满额返券</span>2016-12-09至2016-12-31期间购买指定产品获得优惠券 <a href="#">详情
+                                    >></a></p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <p>累计评价</p><i>100+</i>
+                        </div>
+                    </div>
+                    <div class="addr">
+                        <p>支&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;持&nbsp;<a href="#">以旧换新，闲置台式机回收</a></p>
+                        <p>配&nbsp;送&nbsp;至
+                            <select>
+                                <option selected>上海浦东新区</option>
+                                <option>上海 徐汇区</option>
+                                <option>上海 闵行区</option>
+                                &nbsp;&nbsp;</select> <i>有货</i></p>
+                        <p class="pp">由京东发货，并提供售后服务。现在至明天18:00前完成下单,预计<b>12月26日(周一)</b>送达</p>
+                    </div>
+                    <div class="buy">
+                        <div class="peizhi clearfix">
+                            <p>选择配置</p>
+                            <ul>
+                                <li>Intel E5/12GB内存/256GB闪存</li>
+                                <li>Intel E5/16GB内存/256GB闪存</li>
+                            </ul>
+                        </div>
+                        <div class="taozhuang clearfix">
+                            <p>套&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;装</p>
+                            <ul>
+                                <li>优惠套装1</li>
+                                <li>优惠套装2</li>
+                                <li>优惠套装3</li>
+                            </ul>
+                        </div>
+                        <div class="zzbz clearfix">
+                            <p>增值保障</p>
+                            <ul>
+                                <li><i><img src="images/ssss.png"></i>厂延保1年 ¥799<em>◇</em></li>
+                                <li><i><img src="images/sssssss.png"></i>意外修1年 ¥829<em>◇</em></li>
+                                <span>?</span>
+                                <div class="bztxt">
+                                    <h6>增值保障是指凡在京东购买商品或服务的消费者，保障内容包括：延长保修、只换不修、意外保护、服务保障。覆盖家电、手机数码、电脑办公、汽车用品、服饰家居等商品。</h6>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="btfq clearfix">
+                            <p>白条分期</p>
+                            <ul>
+                                <li>30天免息</li>
+                                <li>¥28888x3期</li>
+                                <li>¥14444x6期</li>
+                                <li>¥7438.66x12期</li>
+                                <li>¥4044.32x24期</li>
+                                <!--                        <i><img src="images/hui.png"></i>&nbsp;&nbsp;
+                                --> <span>?</span>
+                                <div class="bttxt">
+                                    <h6>白条分期是指凡在京东购买商品或服务的消费者，在保障期间内遇到无论是正常使用中的问题还是意外事故。</h6>
+                                </div>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="tishi clearfix">
+                        <form>
+                            <input class="int1" type="text" value="1" ng-model="ipt">
+                            <button class="btn1" type="button" ng-click="jia()">+</button>
+                            <button class="btn2" type="button" ng-click="jian()">-</button>
+                            <p ng-click="add()">加入购物车</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

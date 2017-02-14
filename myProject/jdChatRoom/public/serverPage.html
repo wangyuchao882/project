@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>serverPage</title>
+    <link href="css/clientPage.css" rel="stylesheet">
+    <link href="css/serverPage.css " rel="stylesheet">
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- <link href="css/bootstrap.css" rel="stylesheet">-->
+    <script>
+        $(function () {
+            // 和socket服务器建立连接，获得客户端的socket对象
+            // 连接服务器。这将从被加载的页面向服务器发送连接请求，
+            // 最终在服务器端socketio中触发connection事件
+
+            var clientSocket = io();
+            var currentCid = null;      // 当前正在发送信息的客户
+            // 客户端socket监听服务器发过来的消息
+            clientSocket.on("message", function (data) {
+                var type = data.type;   // 提交消息类型
+                var cid = data.cid;     // 获取cid
+                currentCid = cid;       // 设为当前用户
+                // 根据消息类型，作出相应的处理
+                switch (type) {
+                    case "enter":     // 有新用户连接
+                        // cid显示在列表中
+                        $("#customerList").append('<div class="bg-info customer" data-cid="' + cid + '">客户:' + cid + '</div>');
+                        $("#messages").append('<div class="new" data-cid="' + cid + '"></div>');
+                        break;
+                    case "leave":     // 有用户离开
+                        // 获取cid，从列表中删除
+                        $("#customerList").find("div").each(function () {
+                            if ($(this).attr("data-cid") == cid) {
+                                $(this).remove();       // 删除客户
+                                $("#messages").find(".new[data-cid=" + cid + "]").remove();//删除离开客户
+                            }
+                        });
+                        break;
+                    case "咨询":     // 有用户咨询消息
+
+                        $("#customerList").find('div[data-cid=' + currentCid + ']').addClass("hasmas");
+                        //-------------------------
+                        var msg = "<div class='ac'>[客户" + cid + "问]：" + '<img src="images/no-img_mid_.jpg"><p>' + data.msg + "</p></div>";
+                        // 将消息显示在咨询窗口
+                        $("#messages").find(".new[data-cid=" + cid + "]").append(msg);
+                        // 窗口自动向下滚动
+                        $("#messages").scrollTop($("#messages").prop("scrollHeight"));
+                        break;
+                }
+            });
+            $("#customerList").on("click", " .customer", function () {
+                $(this).addClass("kefubg").siblings().removeClass("kefubg");
+                $("#customerList").find('div[data-cid=' + currentCid + ']').removeClass("hasmas");
+                $("#messages").find(".new[data-cid=" + currentCid + "]").show().siblings().hide();
+                currentCid = $(this).attr("data-cid");
+            });
+            $("#message").val(null);
+            // 客服发送回答信息
+            $("#send").on("click", function () {
+                // 获取客服输入的咨询内容
+
+                var content = $("#message").val();
+                // ......
+                // 敏感词过滤
+
+                // 构造要发送的信息的数据结构
+                var data = {
+                    type: "客服",
+                    cid: currentCid,
+                    msg: content
+                };
+                clientSocket.send(data);
+                $("#messages").find(".new[data-cid=" + currentCid + "]").show().siblings().hide();
+//                $('#messages').append("<div class='aacc'>"+'<img src="images/jd.gif">' + '<p>'+content+'</p>' + "</div>");
+                $('#messages').find(".new[data-cid=" + currentCid + "]").append("<div class='aacc'>" + '<img src="images/jd.gif">' + '<p>' + '[你对客户' + currentCid + '说]：' + content + '</p>' + "</div>");
+                // 窗口自动向下滚动
+                $("#messages").scrollTop($("#messages").prop("scrollHeight"));
+                $("#message").val(null);    // 清空输入框
+            });
+            // 当按下Enter键时，触发send按钮的click事件
+            $('#message').keydown(function (e) {
+                if (e.keyCode == 13) {  // 如果是按下的Enter键
+                    //模拟点击send按钮，触发上面的 Click 事件
+                    $("#send").click();
+                }
+                ;
+            });
+            //$("dl dd").each(function (index) {
+                $("dl dd").on("click",function () {
+                    $("#message").val($(this).html());
+                   console.log($(this).html())
+                });
+            //});
+
+        });
+        $(function(){
+            var oDate=new Date();
+            var year=oDate.getFullYear();
+            var month=oDate.getMonth()+1;
+            var day=oDate.getDate();
+            var hour=oDate.getHours();
+            var mins=oDate.getMinutes();
+            $(".right .top").html(year+" - "+month+" - "+day+" "+hour +" ："+ mins);
+        })
+    </script>
+
+</head>
+<body>
+<div class="wrap">
+    <div class="left">
+        <div class="top">
+            <h4>京东咚咚</h4>
+            <img src="images/jd.gif">
+            <p class="xqls">客服您好</p>
+            <div class="tphy">
+                <!--<span><img src="images/tphy_03.jpg" ></span>-->
+                <p>欢迎使用客服系统</p>
+            </div>
+            <input type="text">
+        </div>
+        <div class="bot">
+            <!--<div class="jdkf" id="customerList">
+                <p>JD</p>
+                <span>官方</span>
+                <h5>京东客服</h5>
+            </div>-->
+            <div class="panel-body" id="customerList">
+                <!--<div class="bg-primary customer">客户：张三</div>
+                <div class="bg-info customer">客户：李四</div>
+                <div class="bg-info customer">客户：王老五</div>-->
+            </div>
+        </div>
+    </div>
+    <div class="mid">
+        <div class="top">
+            <span>官方</span>
+            <p>京东客服</p>
+            <div id="dian"></div>
+        </div>
+        <!--<div class="messages"></div>-->
+        <div id="messages">
+            <!--<div class="content"></div>-->
+            <!--聊天内容区域-->
+
+
+        </div>
+        <div class="bot">
+            <textarea id="message"></textarea>
+            <a href="#" id="send">发送</a>
+        </div>
+    </div>
+    <div class="right">
+        <h3 class="top"><!--回复模板客服您好！！--></h3>
+        <div class="hfmb">
+            <!--<img src="images/zhaopin.jpg">-->
+            <dl>
+                <dt>回复模板</dt>
+                <dd id="d1">亲，您好，很高兴为您服务！</dd>
+                <dd id="d2">请问您有什么问题需要咨询？</dd>
+                <dd id="d3">亲，感谢您的支持，祝您生活愉快！</dd>
+                <dd id="d4">亲，这款预售数量有限，建议您尽早预定哦！</dd>
+                <dd id="d5">本店都是专柜品牌正品，请亲放心购买。</dd>
+                <dd id="d6">宝贝在发货后3天左右到，感谢您耐心等待！</dd>
+            </dl>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

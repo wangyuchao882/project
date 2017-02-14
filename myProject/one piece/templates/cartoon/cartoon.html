@@ -1,0 +1,55 @@
+<ion-view view-title="动漫" hide-nav-bar="true">
+    <ion-header-bar class="bar-assertive">
+        <p class="title">海贼王动漫</p>
+    </ion-header-bar>
+        <ion-content>
+            <div class="list">
+                <div class="item item-divider item-positive">
+                    <i class="icon ion-clipboard"></i>
+                    剧情简介
+                </div>
+            <div class="card has-header">
+                <h3 style="color: red; padding:5px;">航海王 （日本漫画家尾田荣一郎创作漫画）</h3>
+                <p style="padding: 3px; line-height: 30px;">《ONE PIECE》（航海王）简称“OP”，是日本漫画家尾田荣一郎作画的少年漫画作品。<br>在《周刊少年Jump》1997年34号开始连载。
+                    <br>改编的电视动画《航海王》于1999年10月20日起在富士电视台首播。截至2015年6月15日，
+                    <br>《ONE PIECE》以日本本土累计发行了3亿2086万6000本，
+                    <br>被吉尼斯世界纪录官方认证为“世界上发行量最高的单一作者创作的系列漫画”。
+                </p>
+            </div>
+            </div>
+            <div class="list">
+                <div class="item item-divider item-positive">
+                <i class="icon ion-clipboard"></i>
+                创作背景
+            </div>
+                <div class="card has-footer">
+                    <h3>航海王 （日本漫画家尾田荣一郎创作漫画）</h3>
+                    <p style="padding: 3px; line-height: 30px;">尾田荣一郎小时候是看着鸟山明的《龙珠》长大的，那部作品对他影响巨大。<br>
+                        当时尾田最大的心愿就是能在单行本中看到更多的集数。于是当他自己成为漫画家以后，坚持要让《航海王》的单行本分量更足。<br>
+                        他小时候还有一个“打击”，他曾天真地以为《龙珠》是鸟山明一个人画的，但实际上漫画家都有助手协助。<br>
+                        尾田第一次得知这个真相的时候，感觉“受骗了”。这个“打击”让他刻骨铭心，所以他成为漫画家之后竭尽所能不让孩子们失望。<br>
+                        《航海王》画面中所有动态的部分都是尾田亲笔画的，助手只做一些很简单的工作。这是极少见的。<br>
+                        虽然尾田把这个故事画了十多年了，但的确从一开始他就想好了结局，这个结局只有几个主要编辑知道，绝不能透露。<br>
+                        不过，虽然结局是已知的，中间的过程却未知，会有些什么故事，尾田老师自己也不知道。
+                        尾田的煽情功力基本是他自己的，编辑在这点上很少能帮到他。<br>
+                        编辑的作用是当一个读者，如果编辑没有被感动，那么尾田就要重新编他的故事。
+                    </p>
+                </div>
+            </div>
+            <div class="list" show-delete="config.showDel" show-reorder="config.showReo">
+                <div class="item item-divider item-positive">
+                    <i class="icon ion-clipboard"></i>
+                    人物介绍
+                </div>
+                <div class="item item-avatar-left" style="cursor: pointer" ng-repeat="person in products" ui-sref="person">
+                    <img src="images/{{person.imgsrc}}">
+                    <h3>{{person.name}}</h3>
+                    <p>{{person.job}}</p>
+                </div>
+                <ion-infinite-scroll on-infinite="loadMore()" immediate-check="false"></ion-infinite-scroll>
+            </div>
+    </ion-content>
+    <div id="top">
+        <i class="i-icon ion-arrow-up-a"ng-click="top()"></i>
+    </div>
+</ion-view>

@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0
+}
+a{list-style: none; text-decoration: none}
+.box {
+    width: 100%;
+    height: 250px;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    display: block;;
+}
+#tit{font-size: 18px; color: red}
+#con{font-size: 15px; color: #666}
+#pp{font-size: 10px; color: #999}
+#huifu{position: absolute; bottom: 15px; right: 50px; font-size: 18px; color: #999; cursor: pointer}
+.juji{width:100%; height:100px;}
+.juji > img{width:100%; height: 100%; display: block}
+#top{width:44px; height: 44px; background: #9e9e9e; border-radius: 50%;
+    position: absolute;bottom: 55px; right: 15px; cursor: pointer; color: white;
+    text-align: center; line-height: 44px; font-size: 25px}
+.box2{width:100%; height: 700px}
+.box2 > img{width:100%; height: 100%}
+.tuijian{border: 1px solid #efefef; position: relative}
+.text{background: pink; border-radius: 5px; position: absolute; right: 15px; top: 25px;
+    display: block; width: 100px; height: 50px;font-size: 20px; color: red; text-align: center; line-height: 50px}

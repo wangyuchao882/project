@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="js/app.js"></script>
+    <script src="templates/cartoon/cartoon.js"></script>
+    <script src="templates/talk/talk.js"></script>
+    <script src="templates/find/find.js"></script>
+    <script src="templates/rim/rim.js"></script>
+    <script src="templates/home/home.js"></script>
+
+</head>
+<body ng-app="myapp" ng-controller="myCtrl">
+<!--<ion-nav-bar class="bar-assertive">
+    <ion-nav-back-button ui-sref="home">后退</ion-nav-back-button>
+</ion-nav-bar>-->
+<ion-nav-view></ion-nav-view>
+    <ion-tabs class="tabs-icon-top tabs-color-active-assertive" ng-if="showtab" ><!--ng-if="showtab"-->
+        <ion-tab title="首页" icon-on="ion-ios-home" icon-off="ion-ios-home-outline" ui-sref="home"></ion-tab>
+        <ion-tab title="动漫" icon-on="ion-social-tux" icon-off="ion-social-tux" ui-sref="cartoon"></ion-tab>
+        <ion-tab title="论坛" badge="5" badge-style="badge-royal" icon-on="ion-chatbubble-working" icon-off="ion-chatbubble" ui-sref="talk"></ion-tab>
+        <ion-tab title="周边" icon-on="ion-ios-location" icon-off="ion-ios-location-outline" ui-sref="rim"></ion-tab>
+        <ion-tab title="设置" icon-on="ion-gear-a" icon-off="ion-gear-a" ui-sref="find"></ion-tab>
+    </ion-tabs>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+.main{width:1140px; height:798px; margin:0 auto; text-align:center;}
+.main h3{height:50px; line-height:50px; font-family:arial; font-size:30px; color:#000002; padding-top:80px;}
+.main ul{display:inline-block;}
+.main ul li{height:65px; line-height:65px; font-family:arial; font-size:15PX; color:#212322; float:left; font-weight:bold; padding:0 18px; }
+.main .hong{color:#e9270e;}
+.main ul a{color:#252122;}
+.main ul a:hover{color:#e9270e;}
+.main .pic{width:285px; height:182px; float:left;  position:relative;}
+.main .pic img{width:100%; height:100%;}
+.main .pic a{width:100%; height:100%; background-color:rgba(0,0,0,.5); line-height:182px; position:absolute;top:0px; left:0px;display:none; color:#fff;}
+.main .pic:hover a{ display:block;}

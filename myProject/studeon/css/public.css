@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,input,option,dl,dt,dd,textarea{margin:0; padding:0;}
+ul{list-style:none;}
+a{text-decoration:none;}
+input,img{border:none;}
+
+.header{height:83px; box-shadow:0 0 8px rgba(0,0,0,0.5); position:relative; z-index:2;}
+.inner{width:1140px; height:83px; margin:0 auto;}
+.inner .logo{float:left; padding-top:19px;}
+.header .inner ul{float:left; margin-left:152px;}
+.header .inner ul li{float:left;line-height:80px; }
+.header .inner ul a{display:block; font-family:arial; font-size:15px; color:#4e4b4c;border-top:3px solid transparent; padding:0 24px;}
+.header .inner .home{background-image:url(../images/hbg_05.jpg); border-top:3px solid #eb5846; color:#e75a0a;}
+.header .inner ul a:hover{color:#e75a0a;background-image:url(../images/hbg_05.jpg); background-repeat:repeat;border-top:3px solid #eb5846;}
+.header .inner .icon{float:right; padding-top:29px;}
+.header .inner .icon a{display:block; width:23px; height:22px; float:left; margin-left:10px; background-image:url(../images/s-icons.png);background-repeat:no-repeat; }
+.header .inner .icon .f{background-position:-242px -7px;}
+.header .inner .icon .f:hover{background-position:-242px -46px;}
+.header .inner .icon .niao{background-position:-268px -7px;}
+.header .inner .icon .wifi{background-position:-294px -7px;}
+.header .inner .icon .wifi:hover{background-position:-294px -46px;}
+.header .inner .icon .v{background-position:-319px -7px;}
+.header .inner .icon .v:hover{background-position:-319px -46px;}
+.header .inner .icon .you{background-position:-344px -7px;}
+.header .inner .icon .you:hover{background-position:-344px -46px;}
+.header .inner .icon .in{background-position:-369px -7px;}
+.header .inner .icon .in:hover{background-position:-369px -46px;}
+
+.footer .top{height:273px; background-color:#373737;}
+.footer .top_inner{width:1140px; height:273px; margin:0 auto;}
+.footer .top_inner h3{font-family:arial; font-size:17px; color:#fefefe; line-height:50px;}
+.footer .about{width:252px; height:273px; float:left; margin-right:33px;}
+.footer .zuiwai{margin-left:14px;}
+.footer .line{width:133px; border-top:1px solid #434345; border-bottom:1px solid #060608;}
+.footer .about p{font-family:arial; font-size:14px; color:#807f84; line-height:23px; margin-top:18px;}
+.footer .about ul{margin-top:25px;}
+.footer .about ul li{float:left; line-height:37px; background-color:#222224; padding:0 10px; margin-right:3px; margin-bottom:4px; font-family:arial; font-size:13px; }
+.footer .about ul li a{color:#9e9da3; display:block;}
+.footer .about .bird{padding-left:30px; background-image:url(../images/tw.png); background-repeat:no-repeat; background-position:left 5px;}
+.footer .about .bird .ilike2{margin-top:0;}
+.footer .ilike{font-family:arial; font-size:13px; color:#6e6f73; line-height:21px;}
+.footer .about h4{line-height:32px; height:32px; font-family:arial; font-size:11px; color:#f0f0f0;}
+.footer .ilike a{color:#d0d0d0;}
+.footer .about2{margin-right:0;}
+.footer .picbox{width:251px; height:143px; margin-top:25px;}
+.footer .picbox .pic{float:left; width:82px; height:70px;}
+.footer .bot{height:52px; background-color:#232323; position:relative;}
+.footer .bot_inner{width:1140px; margin:0 auto;}
+.footer .bot_inner .botlogo{width:96px; height:24px; float:left; margin-top:15px;}
+.footer .bottext{float:right; font-family:arial; font-size:14px; line-height:14px; color:#efefef; margin-top:21px;}
+.footer .bottext span{color:#e65b48;}
+.footer .bot .sjt{position:fixed; bottom:12px; right:11px; z-index:2;}
+
+

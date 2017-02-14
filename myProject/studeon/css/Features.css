@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+.main{height:1067px; width:1140px; margin:0 auto;}
+.main h2{height:144px; line-height:144px; font-family:arial; font-size:27px; color:#323232; margin:27px 0 0 291px;}
+.main .sixbox{width:1140px; height:276px; margin:0 auto;}
+.main .box_top{width:1140px; height:128px;}
+.main .events{width:360px; height:128px;background-image:url(../images/ser-bg.png); float:left; margin-right:20px;}
+.main .kong{width:67px; height:123px; float:left; background-color:#ed5844;}
+.main .huojian{background-image:url(../images/s-icons.png); background-repeat:no-repeat; background-position:18px 43px;}
+.main .feiji{background-image:url(../images/s-icons.png); background-repeat:no-repeat; background-position:-66px 43px;}
+.main .baozi{background-image:url(../images/s-icons.png); background-repeat:no-repeat; background-position:-144px 43px;}
+.main .jiantou{background-image:url(../images/s-icons.png); background-repeat:no-repeat; background-position:22px -73px;}
+.main .xiazai{background-image:url(../images/s-icons.png); background-repeat:no-repeat; background-position:-64px -69px;}
+.main .baiyun{background-image:url(../images/s-icons.png); background-repeat:no-repeat; background-position:-144px -69px;}
+.main .events .text{width:263px; height:82px; float:right; margin-top:16px;}
+.main .events .text h3{font-family:arial; color:#514d4e; font-size:15px; font-weight:bold; height:29px; line-height:29px;}
+.main .events .text p{font-family:arial; font-size:13px; font-weight:normal; color:#9e9e9e; line-height:20px; margin-top:4px;}
+.main .box_bot{width:1140px; height:128px; margin-top:20px;}
+.main_bot{height:556px;}
+.main_bot h3{height:86px; line-height:86px; font-family:arial; font-size:27px; color:#323232; margin:42px 0 0 426px;}
+.main_bot .left{width:380px; height:198px;float:left; margin-bottom:46px;}
+.main_bot .eye{width:100px; height:100px; margin:0 140px; background-image:url(../images/img-sprite.png); background-repeat:no-repeat; background-position:0 0;}
+.main_bot h4{font-family:arial; font-size:22px; color:#2f2f2f; height:39px; line-height:39px; text-align:center; margin-top:3px;}
+.main_bot p{font-family:arial; font-size:16px; color:#585858; line-height:23px; text-align:center;}
+.main_bot .yuan{width:100px; height:100px; margin:0 140px; background-image:url(../images/img-sprite.png); background-repeat:no-repeat; background-position:-100px 0px;}
+.main_bot .shuye{width:100px; height:100px; margin:0 140px; background-image:url(../images/img-sprite.png); background-repeat:no-repeat; background-position:-200px 0px;}
+.main_bot .hongqi{width:100px; height:100px; margin:0 140px; background-image:url(../images/img-sprite.png); background-repeat:no-repeat; background-position:-300px 0px;}
+.main_bot .quantou{width:100px; height:100px; margin:0 140px; background-image:url(../images/img-sprite.png); background-repeat:no-repeat; background-position:-400px 0px;}
+.main_bot .pic img{width:380px; height:189px;}

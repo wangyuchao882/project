@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+@media screen and (max-width:960px){
+	nav{display:none;}
+	header .icon .yingchang{opacity:1;}
+	header .run{width:37%;height:100px;}
+	header .run .text1{font-size:10px;}
+	header .run .text2{font-size:10px;}
+	header .run h2{font-size:20px;}
+	.weare ul li{float:none; width:100%;}
+	.weare .pic{display:block; width:auto; height:auto; padding-left:30px;}
+	.weare .pic img{display:block; width:100%; float:none;}
+	.phone .left{float:none; margin:0 auto;}
+	.phone .mid{float:none; margin:0 auto;}
+	.oshine .inner{width:100%; display:inline-block; float:none;}
+	.oshine .left{display:inline-block; width:31%;float:none; padding-left:0;}
+	.oshine .mid1{display:inline-block;width:31%;float:none;}
+	.oshine .mid2{display:inline-block;width:31%;float:none;}
+	.oshine .right .sixbox{display:inline-block;width:27%;float:none;}
+	
+	
+	.oshine .right .sixbox{width:100%; display:inline-block;}
+	.oshine .right img{float:none;}
+}
+@media screen and (max-width:770px){
+	.phone{display:block; width:100%;}
+	.phone .left{padding-left:20%;}
+	.phone .mid{padding-left:20%;}
+	.work .picbox{display:block; width:81%;}
+	.work .picbox img{display:block; width:100%; float:none;}
+	.oshine .mid1{float:none;}
+	.oshine .mid2{float:none;}
+	.oshine .right{float:none;}
+	
+}

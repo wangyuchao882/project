@@ -1,0 +1,125 @@
+<ion-view view-title="海贼王" hide-nav-bar="true" class="has-header">
+    <ion-header-bar class="bar-header bar-assertive">
+        <button class="button button-icon ion-navicon" ng-click="toggleLeftSideMenu()"></button>
+        <p class="title">
+            <!--<button class="button button-icon ion-android-happy"></button>-->
+            超人气动漫海贼王
+            <!--<button class="button button-icon ion-android-happy"></button>-->
+        </p>
+        <button class="button button-icon ion-android-happy" ng-click="load()" ui-sref="login">注册/登陆</button>
+    </ion-header-bar>
+    <ion-side-menus>
+        <ion-side-menu-content>
+            <ion-content>
+                <ion-slide-box does-continue="true" auto-play="true">
+                    <ion-slide>
+                        <div class="box"><img src="images/lunbo1.jpg" width="100%" height="300"></div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div class="box"><img src="images/lunbo2.jpg" width="100%" height="300"></div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div class="box"><img src="images/lunbo3.jpg" width="100%" height="300"></div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div class="box"><img src="images/lunbo4.jpg" width="100%" height="300"></div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div class="box"><img src="images/lunbo5.jpg" width="100%" height="300"></div>
+                    </ion-slide>
+                </ion-slide-box>
+                <div class="list">
+                    <div class="item">
+                        <h2 style="color:blue">精彩视频</h2>
+                        <hr>
+                        <!--<video width="100%" height="100%" src="video/one.mp4" controls autoplay></video><br>-->
+                        <video width="100%" height="100%" src="video/Compress.MP4" controls autoplay></video>
+                    </div>
+                </div>
+                <div class="card has-footer">
+                    <p style="color:red">精彩推荐</p>
+                    <div class="row">
+                        <div class="tuijian">
+                            <img src="images/lufei.jpg" class="col col-50">
+                            <a href="javascript:;" class="text">
+                                <i class="icon ion-share assertive"></i>
+                                推荐
+                            </a>
+                        </div>
+                        <div class="tuijian">
+                            <img src="images/lufei.jpg" class="col col-50">
+                            <a href="javascript:;" class="text">
+                                <i class="icon ion-share assertive"></i>
+                                热搜
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="tuijian">
+                            <img src="images/lufei.jpg" class="col col-50">
+                            <a href="javascript:;" class="text">
+                                <i class="icon ion-share assertive"></i>
+                                活动
+                            </a>
+                        </div>
+                        <div class="tuijian">
+                            <img src="images/lufei.jpg" class="col col-50">
+                            <a href="javascript:;" class="text">
+                                <i class="icon ion-share assertive"></i>
+                                一起看
+                            </a>
+                        </div>
+                    </div>
+                    <br><br><br><br><br>
+
+                </div>
+            </ion-content>
+        </ion-side-menu-content>
+        <ion-side-menu side="left" width="300">
+            <div class="list has-header">
+                <div class="item"><img src="images/lufei.jpg" width="100%" height="130"></div>
+                <a class="item" ui-sref="home">
+                    <i class="icon ion-ios-home calm"></i>
+                    首页
+                    <i class="icon ion-ios-home calm"></i>
+                </a>
+                <a class="item" ui-sref="cartoon">
+                    <i class="icon ion-social-tux royal"></i>
+                    动漫
+                    <i class="icon ion-social-tux royal"></i>
+                </a>
+                <a class="item" ui-sref="talk">
+                    <i class="icon ion-chatbubble-working positive"></i>
+                    论坛
+                    <i class="icon ion-chatbubble-working positive"></i>
+                </a>
+                <a class="item" ui-sref="rim">
+                    <i class="icon ion-ios-location energized"></i>
+                    周边
+                    <i class="icon ion-ios-location energized"></i>
+                </a>
+                <a class="item" ui-sref="find">
+                    <i class="icon ion-gear-b assertive"></i>
+                    设置
+                    <i class="icon ion-gear-b assertive"></i>
+                </a>
+                <div class="item">
+                    <i class="icon ion-android-pin balanced"></i> 上海
+                </div>
+                <div class="item">
+                    实时天气：{{weather.data.forecast[0].type}}
+                </div>
+                <div class="item">
+                    温度：{{weather.data.wendu+"°C"}}
+                </div>
+                <div class="item">
+                    最高温度：{{weather.data.forecast[0].high}}
+                </div>
+                <div class="item">
+                    最低温度：{{weather.data.forecast[0].low}}
+                </div>
+            </div>
+        </ion-side-menu>
+    </ion-side-menus>
+</ion-view>

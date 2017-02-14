@@ -1,0 +1,34 @@
+<div class="panel panel-danger">
+    <div class="panel-heading">显示商品</div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>商品名称</th>
+                <th>商品价格</th>
+                <!--<th>操作系统</th>
+                <th>出厂日期</th>-->
+                <th>预览</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!--使用自定义过滤器:指定过滤器名称和参数. limitTo-->
+            <tr ng-repeat="product in products">
+                <td>{{$index + 1}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.price | currency:"￥"}}</td>
+                <!--<td>{{product.os | uppercase}}</td>
+                <td>{{product.date | date:"yyyy年MM月dd日 HH:mm:ss"}}</td>-->
+                <td><img ng-src="images/{{product.imgsrc}}"/></td>
+                <td>
+                    <!--<button class="btn btn-link" ng-click="add(product)">购买</button>-->
+                    <!--<a href="#/detail?name={{product.name}}">详情</a>-->
+                    <a href="#/detail?name={{product.name}}">详情</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

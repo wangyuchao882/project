@@ -1,0 +1,736 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>download示例</title>
+<style type="text/css">
+ul{list-style:none;}
+body{
+	background-color:#f2f2f2;
+	font-family:arial,"微软雅黑";
+	font-size:11px;
+	color:#666666;
+}
+*{margin:0;padding:0;}
+.header{
+	background-color:#fff;
+}
+.header .header_inner{
+	width:990px;
+	height:70px;
+	margin:0 auto;
+}
+.header .logo{
+	float:left;
+	padding-top:15px;
+}
+.header .nav{
+	float:right;
+}
+.text{
+	height:42px;
+	width:990px;
+	margin:0 auto;
+	padding-top:16px;
+}
+.banner{
+	height:508px;
+}
+.banner .top{
+	height:271px;
+	width:990px;
+	background-color:#fff;
+	margin:0 auto;
+}
+.banner .title{
+	height:62px;
+}
+.banner .hot{
+	width:100px;
+	height:12px;
+	padding-left:12px;
+	padding-top:18px;
+}
+.banner .icon{
+	font-size:16px;
+	height:119px;
+	width:990px;
+	border-bottom:1px solid #f2f2f2;
+}
+.banner .icon .box{
+	height:119px;
+	width:120px;
+	float:left;
+	margin-left:20px;
+}
+.banner .box .tubiao{
+	height:73px;
+	margin:0 auto;
+}
+.banner .type{
+	height:90px;
+	padding-top:38px;
+	padding-left:20px;
+}
+.banner .type span{
+	padding:0 22px;
+}
+.banner .down{
+	height:222px;
+}
+.banner .down_inner{
+	width:990px;
+	margin:0 auto;
+	margin-top:15px;
+	background-color:#fff;
+}
+.banner .shouji{
+	height:40px;
+	width:990px;	
+}
+.banner .shouji .left h4{
+	width:90px;
+	float:left;	
+	padding-left:14px;
+	padding-top:15px;
+}
+.banner .shouji .right{
+	width:285px;
+	float:right;
+	padding-right:14px;
+	padding-top:15px;
+}
+.banner .name{
+	height:50px;
+	width:990px;
+	padding-top:20px;
+	margin-left:15px;
+}
+.banner .name .up{
+	height:10px;
+	width:990px;
+	padding-bottom:18px;
+}
+.banner .name .up2{
+	height:10px;
+	width:990px;
+}
+.banner .down  .name .li1{
+	width:160px;
+	height:10px;
+}
+.banner .down  .name .li2{
+	width:160px;
+	height:10px;
+}
+.banner .down  .name .li3{
+	width:160px;
+	height:10px;
+}
+.banner .down  .name .li4{
+	width:160px;
+	height:10px;
+}
+.banner .down  .name .li5{
+	width:160px;
+	height:10px;
+}
+.banner .down  .name .li6{
+	width:160px;
+	height:10px;
+}
+.banner .down  .name .li7{
+	width:160px;
+	height:10px;
+}
+.banner .down  .name .li8{
+	width:160px;
+	height:10px;
+}
+.banner .down  .name .li9{
+	width:160px;
+	height:10px;
+}
+.banner .down  .name .li10{
+	width:160px;
+	height:10px;
+}
+.banner .down  .name .li11{
+	width:160px;
+	height:10px;
+}
+.banner .down  .name .li12{
+	width:160px;
+	height:10px;
+}
+.banner .down .bot{
+	width:990px;
+	height:110px;
+	background-color:#fff;
+}
+.banner .down .bot .bot_btn{
+	width:220px;
+	height:50px;
+	background-color:#ff6600;
+	margin:0 380px;
+	margin-top:40px;
+}
+.banner .down .bot_btn .non{
+	height:16px;
+	text-align:center;
+}
+.main{
+	height:330px;
+	color:#666666;
+	font-size:11px;
+}
+.main_top{
+	height:50px;
+	width:990px;
+	margin:0 auto;
+	margin-top:50px;
+	background-color:#fff;
+	border-bottom:1px solid #eeeeee;
+}
+.main h4{
+	font-size:13px;
+	color:#666666;
+}
+.main_top h3{
+	width:84px;
+	height:12px;
+	float:left;
+	margin-top:18px;
+	margin-left:14px;
+	font-size:14px;
+	color:#666666;
+	font-weight:normal;
+}
+.main .main_top p{
+	width:250px;
+	height:11px;
+	float:right;
+	margin-top:17px;
+	margin-left:17px;
+	font-size:13px;
+	color:#666666;	
+}
+.main_top span{
+	color:blue;
+}
+.main .main_bot{
+	height:283px;
+	width:990px;
+	margin:0 auto;
+	background-color:#fff;
+}
+.main .main_left{
+	width:329px;
+	height:320px;
+	float:left;
+	border-left:1px solid #E9E7E7;
+}
+.main .main_left h4{
+	margin-top:10px;
+	margin-left:10px;
+}
+.main .main_left .iphone{
+	width:329px;
+	height:75px;
+	margin-top:32px;
+	margin-left:50px;
+}
+.main .main_left .iphone p{
+	margin-left:20px;
+}
+.main .iphone .pp{
+	width:200px;
+	height:48px;
+	margin:0 auto;
+	background-color:#6aa7df;
+	margin-left:15px;
+}
+.main .iphone .pp_pic{
+	width:134px;
+	height:22px;
+	margin:0 auto;
+	font-size:15px;
+	padding-top:5px;
+	margin-top:32px;
+}
+.main .main_left .android{
+	width:329px;
+	height:75px;
+	padding-top:50px;
+}
+.main .main_left .android p{
+	margin-left:120px;
+	margin-bottom:10px;
+}
+.main .android .wandou{
+	width:200px;
+	height:48px;
+	margin:0 auto;
+	background-color:#81b846;
+}
+.main .main_mid{
+	width:329px;
+	height:320px;
+	float:left;	
+}
+.main .main_mid p{
+	line-height:35px;
+}
+.main .main_mid .pic1{
+	margin-top:20px;
+}
+.main .main_mid h4{
+	margin-top:10px;
+	margin-left:10px;
+}
+.main .main_bot .main_right{
+	height:280px;
+	padding-top:10px;
+	padding-left:10px;
+	float:right;
+}
+.main .main_bot .main_right p{
+	margin-top:20px;	
+}
+.main .main_bot .main_right img{
+	margin-top:30px;
+	margin-left:50px;
+}
+main .main_bot .main_right .piccc .pic3 p{
+	margin-left:100px;
+}
+.footer{
+	height:471px;
+	background-color:#333333;
+	margin-top:40px;
+}
+.footer .footer_inner{
+	width:990px;
+	height:471px;
+	margin:0 auto;
+}
+
+.footer .top{
+	width:990px;
+	height:330px;
+	border-bottom:1px dashed #939090;
+	margin:0 auto;
+	font-size:11px;
+	color:#b1aca9;
+}
+.footer .top .top_left{
+	width:820px;
+	float:left;
+}
+.footer .footer_inner .liebiao{
+	width:164px;
+	line-height:23px;
+	font-size:10px;
+	color:#a9afad;
+	float:left;
+}
+.footer .footer_inner .liebiao h4{
+	padding-top:51px;
+	margin-bottom:5px;
+}
+.footer .top .top_right{
+	width:170px;
+	float:right;
+
+}
+.footer .top_right .box{
+	width:170px;
+	height:277px;
+}
+.footer .box .map{
+	width:136px;
+	height:22px;
+	background-image:url(images/map_03.jpg);
+	background-repeat:no-repeat;
+	background-position:8px center;
+	border:1px solid #434343;
+	margin-top:70px;
+	font-size:14px;
+	text-align:center;
+}
+.footer .box .map .pic{
+	text-align:right;
+}
+.footer .box .weibo{
+	margin-left:25px;
+	margin-top:15px;
+}
+.footer .box .weibo li{
+	margin-top:15px;	
+}
+.footer .box .weibo .tubiao1{
+	list-style-image:url(images/tubiao_03.jpg);
+}
+.footer .box .weibo .tubiao2{
+	list-style-image:url(images/tubiao_06.jpg);
+}
+.footer .box .weibo .tubiao3{
+	list-style-image:url(images/tubiao_09.jpg);
+}
+.footer .box .weibo .tubiao4{
+	list-style-image:url(images/tubiao_11.jpg);
+}
+.footer .box .weibo .tubiao5{
+	list-style-image:url(images/tubiao_14.jpg);
+}
+.footer .box .weibo .tubiao6{
+	list-style-image:url(images/tubiao_17.jpg);
+}
+.footer .mid{
+	height:50px;
+	width:990px;
+	border-bottom:1px dashed #909090;
+	color:#acb0b1;
+}
+.footer .mid .mid_top{
+	width:990px;
+	height:38px;
+	font-size:12px;
+}
+.footer .mid .left{
+	width:918px;
+	float:left;
+	margin-left:9px;
+}
+.footer .mid .right{
+	width:16px;
+	float:right;
+	margin-right:10px;
+}
+.footer .mid .mid_top span{
+	width:990px;
+	padding:0 6px;
+}
+.footer .mid .mid_down{
+	height:38px;
+	border-bottom:1px dashed #909090;
+}
+.footer .bot{
+	height:68px;
+	width:990px;
+	color:#606662
+}
+.footer .bot .bot_left{
+	height:68px;
+	width:116px;
+	float:left;
+}
+.footer .bot .bot_left img{
+	margin-top:20px;
+}
+.footer .bot .bot_mid{
+	height:68px;
+	width:514px;
+	float:left;
+	margin-bottom:10px;
+}
+.footer .bot .text{
+	line-height:5px;
+	font-size:10px;
+	margin-left:15px;
+}
+.footer .bot .text1{
+	line-height:30px;
+}
+.footer .bot .bot_right{
+	width:360px;
+	height:68px;
+	float:right;
+}
+.footer .bot .bot_right{
+	margin:0 auto;
+}
+.footer .bot .pic{
+	float:right;
+	margin-top:20px;
+}
+
+</style>
+</head>
+
+<body>
+	<div class="header">
+    	<div class="header_inner">
+            <div class="logo"><img src="images/uclogo.png" /></div>
+            <div class="nav"><img src="images/index_nav_02.jpg" /></div>
+        </div>
+    </div>
+    <div class="text">
+    	<p>首页> 产品选择</p>
+    </div>
+    <div class="banner">
+    	<div class="top">
+        	<div class="title">
+            	<div class="hot">热门下载</div>
+            </div>
+            <div class="icon">
+            	<div class="box">
+                	<div class="tubiao"><img src="images/index_main_icon_10.jpg" /></div>
+                    <div class="text">电脑版</div>
+                </div>
+              <div class="box">
+                	<div class="tubiao"><img src="images/index_main_icon_03.jpg" /></div>
+                    <div class="text">Android</div>
+                </div>
+              <div class="box">
+                	<div class="tubiao"><img src="images/index_main_icon_05.jpg" /></div>
+                    <div class="text">iOS(iPhone)</div>
+                </div>
+              <div class="box">
+                	<div class="tubiao"><img src="images/apple_03.jpg" /></div>
+                    <div class="text">iOS(iPad)</div>
+                </div>
+              <div class="box">
+                	<div class="tubiao"><img src="images/download_06.jpg" /></div>
+                    <div class="text">aPad</div>
+                </div>
+              <div class="box">
+                	<div class="tubiao"><img src="images/index_main_icon_14.jpg" /></div>
+                    <div class="text">TV版</div>
+                </div>
+              <div class="box">
+                	<div class="tubiao"><img src="images/index_main_icon_07.jpg" /></div>
+                    <div class="text">WP</div>
+                </div>
+            </div>
+            <div class="type">
+            	<ul>
+                	<li style="float:left;">Java<span>|</span></li>
+                	<li style="float:left;">Symbian<span>|</span></li>
+                	<li style="float:left;">WM(PPC/SP)<span>|</span></li>
+                	<li style="float:left;">Meego<span>|</span></li>
+                	<li style="float:left;">斯凯mrp<span>|</span></li>
+                	<li style="float:left;">Blackberry<span>|</span></li>
+                	<li style="float:left;">Ophone<span>|</span></li>
+                	<li style="float:left;">WinPad</li>
+                </ul>
+            </div>
+        </div>
+        <div class="down">
+            <div class="down_inner">
+                <div class="shouji">
+                    <div class="left">
+                    <h4>按机型下载</h4>               
+                    </div>
+                    <div class="right"><img src="images/download_03.jpg" /></div>
+                </div>
+                <div class="name">
+                	<div class="up">
+                    	<ul>
+                        	<li class="li1" style="float:left;">iPhone 5S</li>
+                        	<li class="li2" style="float:left;">GALAXY Note 3</li>
+                        	<li class="li3" style="float:left;">G6-U00</li>
+                        	<li class="li4" style="float:left;">galaxy s4 sgh-i337</li>
+                        	<li class="li5" style="float:left;">iPhone 5C</li>
+                        	<li class="li6" style="float:left;">MX3</li>
+                        </ul>
+                    </div>
+                	<div class="up2">
+                    	<ul>
+                        	<li class="li7" style="float:left;">MI3</li>
+                        	<li class="li8" style="float:left;">P6-U06</li>
+                        	<li class="li9" style="float:left;">Xperia Z1</li>
+                        	<li class="li10" style="float:left;">One</li>
+                        	<li class="li11" style="float:left;">vivo Xplay</li>
+                        	<li class="li12" style="float:left;">GALAXY Note2</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                    <div class="bot">
+                    	<div class="bot_btn">
+                        <div class="tel_pic"><img src="images/tel_03.jpg" /></div>
+                        	<div class="non">
+                        	更多手机型号
+                            </div>
+                        </div>
+                    </div>
+                <div class="but"></div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+    	<div class="main_top">
+        	<h4>其他下载方式</h4>
+            <p>如无法下载或有其他建议请给我们 <span>反馈</span></p>
+        </div>
+        <div class="main_bot">
+        	<div class="main_left">
+            	<div class="left_title">
+            		<h4>一键下载</h4>
+                </div>
+                <div class="iphone">
+                	<p>iPhone （仅支持越狱手机)</p>
+                    <div class="pp">
+                    	<div class="pp_pic"><img src="images/pp_03.jpg" /> PP助手一键下载</div>
+                    </div>
+                </div>
+                <div class="android">
+                	<p>Android手机</p>
+                    <div class="wandou">
+                    	<div class="pp_pic"><img src="images/wandou_03.jpg" />豌豆荚一键下载</div>
+                    </div>
+                </div>
+               	
+            </div>
+        	<div class="main_mid">
+            	<h4>短信下载</h4>
+                <p>输入您的手机号,我们会发送一条短信到您的手机,点击短信中的网址即可下载UC浏览器。</p>
+                <div class="pic1"><img src="images/download_05_03.jpg" /></div>
+            </div>
+        	<div class="main_right">
+            	<h4>二维码下载</h4>
+                <p>使用手机二维码软件扫描下图，即可下载UC浏览器。</p>
+                <div class="piccc">
+                <div class="pic3"><img src="images/twocode_wxoffice.png" />
+                	
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+		    	<div class="footer_inner">
+        	<div class="top">
+            	<div class="top_left">
+                    <div class="liebiao">
+                        <h4>UC浏览器</h4>
+                            <ul>
+                                <li>产品动态</li>
+                                <li>功能介绍</li>
+                                <li>安卓浏览器</li>
+                                <li>iPhone浏览器</li>
+                                <li>电脑浏览器</li>
+                                <li>WP浏览器</li>
+                                <li>iPad浏览器</li>
+                                <li>aPad浏览器</li>
+                                <li>TV浏览器</li>
+                                <li>塞班浏览器</li>
+                            </ul>
+                    </div>
+                    <div class="liebiao">
+                        <h4>公司</h4>
+                            <ul>
+                                <li>公司首页</li>
+                                <li>公司概况</li>
+                                <li>公司动态</li>
+                                <li> 管理团队</li>
+                                <li>企业文化</li>
+                                <li>粉丝专区</li>
+                                <li>荣誉之旅</li>
+                                <li>联系我们</li>
+                                <li>投资者</li>
+                                <li>UC闪屏</li>
+                            </ul>
+                    </div>
+                    <div class="liebiao">
+                        <h4>其它产品</h4>
+                            <ul>
+                                <li>UC九游</li>
+                                <li>PP助手</li>
+                                <li>神马搜索</li>
+                                <li>UC云</li>
+                                <li>U点充值</li>
+                                <li>用户中心</li>
+                                <li>体验中心</li>
+                                <li>帮助中心</li>
+                                <li>意见反馈</li>
+                            </ul>
+                    </div>
+                    <div class="liebiao">
+                        <h4>开放合作</h4>
+                            <ul>
+                                <li>游戏开放平台</li>
+                                <li>运营商合作</li>
+                                <li>安卓浏览器</li>
+                                <li>终端厂商合作</li>
+                                <li>互联网合作</li>
+                                <li>开发者中心</li>
+                                <li>战略投资</li>
+                            </ul>
+                    </div>
+                    <div class="liebiao">
+                        <h4>招聘</h4>
+                            <ul>
+                                <li>社会招聘</li>
+                                <li>人才推荐</li>
+                                <li>校园招聘</li>
+                                <li>实习生招聘</li>
+                                <li>电脑浏览器</li>
+                                <li>内部推荐</li>
+                                <li>走进UC</li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="top_right">
+                	<div class="box">
+                    	<div class="map">
+                        		中文版
+                        	  <div class="pic"> <img src="images/xsj_03.jpg" /> </div>
+                    	</div>
+                      <div class="weibo">
+                        	<ul>
+                            	<li class="tubiao1">手机站</li>
+                            	<li class="tubiao2">Pad站 </li>
+                            	<li class="tubiao3">TV站 </li>
+                            	<li class="tubiao4">UC浏览器微博</li>
+                            	<li class="tubiao5">UC浏览器贴吧</li>
+                            	<li class="tubiao6">UC浏览器微信</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mid">
+            	<div class="mid_top left">
+                	<ul>
+                    	<li style="float:left;">阿里巴巴集团<span>|</span></li>
+                    	<li style="float:left;">淘宝网<span>|</span></li>
+                    	<li style="float:left;">天猫<span>|</span></li>
+                    	<li style="float:left;">聚划算<span>|</span></li>
+                    	<li style="float:left;">全球速卖通<span>|</span></li>
+                    	<li style="float:left;">阿里巴巴国际交易市场<span>|</span></li>
+                    	<li style="float:left;">1688<span>|</span></li>
+                    	<li style="float:left;">阿里妈妈<span>|</span></li>
+                    	<li style="float:left;">阿里旅行·去啊<span>|</span></li>
+                    	<li style="float:left;">阿里云计算<span>|</span></li>
+                    	<li style="float:left;">YunOS<span>|</span></li>
+                    	<li style="float:left;">阿里通信<span>|</span></li>
+                    	<li style="float:left;">万网<span>|</span></li>
+                    	<li style="float:left;">高德</li>
+                    </ul>
+                </div>
+                <div class="mid_top right"><img src="images/dsj_03.jpg" /></div>
+            </div>
+            <div class="bot">
+            	<div class="bot_left"><img src="images/logo_company.png" /></div>
+                <div class="bot_mid">
+                	<div class="text">
+                    	<div class="text1">
+                        	©2004-2014 uc.cn 版权所有 增值电信业务经营许可证: 粤B2-20070379 粤ICP备09210879号
+                        </div>
+                        <div class="text2">
+                        	<p>网络文化经营许可证：文网文[2010]176号：（粤）-非经营性-2011-0120</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bot_right">
+                    <div class="pic">
+                        <img src="images/anva.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

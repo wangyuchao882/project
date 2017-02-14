@@ -1,0 +1,83 @@
+<div class="panel panel-danger">
+    <div class="panel-heading">查看购物车</div>
+    <div class="panel-body">
+        <p class="well qgg" ng-show="cart.length==0">
+            您的购物车中还没有商品。<a href="#/productList">去逛逛！！</a>
+        </p>
+
+        <table class="table table-striped" ng-show="cart.length>0">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>商品名称</th>
+                <th>商品价格</th>
+                <!--<th>操作系统</th>
+                <th>出厂日期</th>-->
+                <th>购买数量</th>
+                <th>小计</th>
+                <th>预览</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!--使用自定义过滤器:指定过滤器名称和参数. limitTo-->
+            <tr ng-repeat="item in cart">
+                <td>{{$index + 1}}</td>
+                <td>{{item.product.name}}</td>
+                <td>{{item.product.price | currency:"￥"}}</td>
+                <!--<td>{{item.product.os | uppercase}}</td>
+                <td>{{item.product.date | date:"yyyy年MM月dd日 HH:mm:ss"}}</td>-->
+                <!--<td>{{item.number}}</td>-->
+                <!--<td><input style="width:50px;" type="number" value="{{ipt}}"></td>-->
+                <td><input style="width:50px;" type="number" min="1"  ng-model="cart[$index].number"></td>
+                <td>{{item.number * item.product.price | currency:"￥"}}</td>
+                <td><img ng-src="images/{{item.product.imgsrc1}}"/></td>
+                <td>
+                    <button class="btn btn-link" ng-click="remove(item.product.name)">删除</button>
+                </td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <th></th>
+                <th>总计:</th>
+                <th></th>
+                <!--<th></th>
+                <th></th>-->
+                <th>{{count()}}</th>
+                <th>{{money() | currency:"￥"}}</th>
+                <th></th>
+                <th></th>
+            </tr>
+            </tfoot>
+        </table>
+        <hr>
+        <div ng-show="cart.length>0">
+            <div class="panel-body">
+                配送地址：
+                <select ng-model="province" ng-options="p.province for p in data">
+                    <option value="">--请选择所在的省份--</option>
+                </select>
+                <select ng-model="city" ng-options="p.city for p in province.cities">
+                    <option value="">--请选择所在的城市--</option>
+                </select>
+                <select ng-model="xian" ng-options="p for p in city.xian">
+                    <option value="">--请选择所在的县--</option>
+                </select>
+            </div>
+            <hr>
+
+            <p class="well text-danger">
+                应付金额：{{money() | currency:"￥"}}元</p>
+            <hr>
+            <p class="well text-danger" style="text-decoration: line-through">运费：{{billing.shipping | currency:"￥"}}元</p>
+            <hr>
+            <p class="well text-danger">
+            实付金额：{{money()-billing.shipping | currency:"￥"}}元
+            </p>
+
+
+
+        </div>
+    </div>
+</div>
